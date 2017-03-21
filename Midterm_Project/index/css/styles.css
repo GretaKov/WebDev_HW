@@ -1,0 +1,237 @@
+*{
+		margin: 0;
+		padding: 0;
+	}
+
+	.clear-fix:after {
+		display: block;
+		clear: both;
+		content: '';
+		height: 0;
+		font-size: 0;
+		visibility: 0;
+	}
+
+/* NAVIGATION */
+
+	.header{
+		width: 100%;
+		position: relative;
+		margin-bottom: 10px;
+		background: rgba(96,32,32,0.5);
+		line-height: 71px;
+		text-align: center;
+	}
+
+	.home{
+		margin-left: 10px;
+		width:70px;
+		height:70px;
+		float: left;
+	}
+
+	nav{
+		padding-right: 100px;
+	}
+
+	nav h1{
+		max-width: 5%;
+		float: left;
+		margin: 10px;
+	}
+
+	nav ul li{
+		padding-right: 50px;
+		display: inline-block;
+		float: center;
+	}
+
+	nav a{
+		font-family: 'Quicksand', sans-serif;
+		text-decoration: none; 		
+		color: white;
+		transition: all 0.5s;
+	}
+
+	a.link:hover{
+		color: grey;
+		transition: all 0.5s ease-in-out;
+	}
+
+/* FIRST DIV */
+
+	.main-image{
+		width: 100%;
+		height: 650px;
+		background-color: rgba(40,56,78,0.5);
+		background: url(../img/clouds_mountains.jpg)no-repeat center fixed;
+		background-size: cover;
+	}
+
+	.images-body{
+		width: 100%;
+		height: 690px;
+		background-color: rgba(255,255,255,0.2);
+		background: url(../img/lightwood.jpg)no-repeat center fixed;
+		background-size: cover;
+	}
+
+	.thumb{
+		width: 300px;
+		height: 300px;
+		position: relative;
+		margin-top: 150px;
+		margin-left: 125px;
+		display: inline-block;
+		background-color: grey;
+	}
+
+
+	.thumb img{
+		width: 100%;
+		height: auto;
+		border: 10px solid #FEF9EF;
+		border-bottom: 45px solid #FEF9EF;
+	}
+
+	.thumb p {
+	    position: absolute;
+	    text-align: center;
+	    width: 100%;
+	    bottom: -53px;
+	  	font: 400 25px 'Sacramento', cursive;
+	    color: #888;
+	}
+
+	.thumb p:hover{
+		text-decoration: underline;
+	}
+
+	p.inside:Hover{
+		text-decoration: none;
+	}
+
+
+	.rotate-left{
+	    transition: all 0.5s ease;
+	}
+
+	.rotate-left:hover{
+    	transform: rotate(-10deg);
+	}
+
+	.rotate-right{
+	    transition: all 0.5s ease;
+	}
+
+	.rotate-right:hover{
+    	transform: rotate(10deg);
+	}
+
+/* EXPLANATIONS */
+
+	.yoga{
+		width: 100%;
+		height: 690px;
+		background: url(../img/lightwood.jpg)no-repeat center fixed;
+		background-size: cover;
+
+	}
+
+	.eating{
+		width: 100%;
+		height: 690px;
+		background: url(../img/lightwood.jpg)no-repeat center fixed;
+		background-size: cover;
+	}
+
+	.meditation{
+		width: 100%;
+		height: 690px;
+		background: url(../img/lightwood.jpg)no-repeat center fixed;
+		background-size: cover;
+	}
+
+	.description{
+		width: 600px;
+		height: 300px;
+		float: left;
+		display: inline-block;
+		margin-top: 99px;
+		margin-left: 100px;
+		background-color: rgba(254,249,239,0.7);
+	}
+
+	.description p{
+		font-family: 'Quicksand', sans-serif;	
+		font-weight: bold;
+		color: black;
+		padding-top: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		text-indent: 2.0em; 
+	}
+
+	.side-image{
+		width: 300px;
+		height: 300px;
+		float: right;
+		margin-top: 100px;
+		margin-right: 150px;
+		margin-bottom: 100px;
+		background-color: grey;
+	}
+
+	.description-two{
+		width: 600px;
+		height: 300px;
+		float: right;
+		display: inline-block;
+		margin-top: 99px;
+		margin-right: 100px;
+		background-color: rgba(254,249,239,0.7);
+	}
+
+	.description-two p{
+		font-family: 'Quicksand', sans-serif;	
+		font-weight: bold;
+		color: black;
+		padding-top: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		text-indent: 2.0em; 
+	}
+
+	.side-image2{
+		width: 300px;
+		height: 300px;
+		float: left;
+		margin-left: 150px;
+		margin-top: 100px;
+		background-color: grey;
+	}
+
+	.end{
+		text-align: right;
+	}
+
+	.top{
+		width: 100%;
+		height: 100px;
+	}
+
+	.top img{
+		position: relative;
+		float:right;
+	}
+
+
+
+
+	footer{
+		width: 100%;
+		height: 80px;
+		background-color: rgba(56,32,230,0.3);
+		background: url(../img/clouds_mountains.jpg)no-repeat center fixed;
+		background-size: cover;
+	}

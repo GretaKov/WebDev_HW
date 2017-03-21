@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yoga Journal-The Yoga</title>
+	<link rel="stylesheet" type="text/css" href="css/yogastyles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="arrowtoptop" class="main-image">
+		<div class="header">
+		<div class="home">
+			<a href="../index/index.html">
+				<img src="../eating/img/home.png">
+			</a>
+		</div>
+		<nav class="clear-fix">
+			<ul>
+				<li><a href="yoga.html" class="link">yoga</a></li>
+				<li><a href="../eating/eating.html" class="link">eating</a></li>
+				<li><a href="../meditation/meditation.html" class="link">meditation</a></li>
+			</ul>
+		</nav>
+		</div>
+
+		<div class="header2">
+		<nav>
+			<ul>
+				<li class="jump"><a href="#first">Sun Salutation</a></li>
+				<li class="jump"><a href="#second">Standing Poses</a></li>
+				<li class="jump"><a href="#third">Balancing Poses</a></li>
+			</ul>
+		</nav>
+		</div>
+
+</div>
+
+<!-- slideshow 1  -->
+
+<div id="first" class="sequence1">
+	<div class="slideshow-container">
+  		<div class="mySlides fade">
+    		<div class="numbertext">1 / 12</div>
+    		<img src="../yoga/img/sun1.png" style="width:100%">
+  		</div>
+
+		 <div class="mySlides fade">
+		    <div class="numbertext">2 / 12</div>
+		    <img src="../yoga/img/sun2.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides fade">
+		    <div class="numbertext">3 / 12</div>
+		    <img src="../yoga/img/sun3.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides fade">
+		    <div class="numbertext">4 / 12</div>
+		    <img src="../yoga/img/sun4.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides fade">
+		    <div class="numbertext">5 / 12</div>
+		    <img src="../yoga/img/sun5.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides fade">
+		    <div class="numbertext">6 / 12</div>
+		    <img src="../yoga/img/sun6.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides fade">
+		    <div class="numbertext">7 / 12</div>
+		    <img src="../yoga/img/sun7.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides fade">
+		    <div class="numbertext">8 / 12</div>
+		    <img src="../yoga/img/sun8.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides fade">
+		    <div class="numbertext">9 / 12</div>
+		    <img src="../yoga/img/sun4.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides fade">
+		    <div class="numbertext">10 / 12</div>
+		    <img src="../yoga/img/sun3.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides fade">
+		    <div class="numbertext">11 / 12</div>
+		    <img src="../yoga/img/sun2.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides fade">
+		    <div class="numbertext">12 / 12</div>
+		    <img src="../yoga/img/sun1.png" style="width:100%">
+		 </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+  <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(8)"></span> 
+  <span class="dot" onclick="currentSlide(9)"></span> 
+  <span class="dot" onclick="currentSlide(10)"></span> 
+  <span class="dot" onclick="currentSlide(11)"></span> 
+  <span class="dot" onclick="currentSlide(12)"></span> 
+</div>
+
+</div>
+
+<!-- slideshow 1 script -->
+
+<script type="text/javascript">
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+  			showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1} 
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none"; 
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block"; 
+		  dots[slideIndex-1].className += " active";
+		}
+	</script>
+
+<footer></footer>
+
+
+<!-- slideshow 2  -->
+<div id="second" class="sequence2">
+	<div class="slideshow-container2">
+  		<div class="mySlides2 fade2">
+    		<div class="numbertext2">1 / 6</div>
+    		<img src="../yoga/img/stand1.png" style="width:100%">
+  		</div>
+
+		 <div class="mySlides2 fade2">
+		    <div class="numbertext2">2 / 6</div>
+		    <img src="../yoga/img/stand2.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides2 fade2">
+		    <div class="numbertext2">3 / 6</div>
+		    <img src="../yoga/img/stand3.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides2 fade2">
+		    <div class="numbertext2">4 / 6</div>
+		    <img src="../yoga/img/stand4.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides2 fade2">
+		    <div class="numbertext2">5 / 6</div>
+		    <img src="../yoga/img/stand5.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides2 fade2">
+		    <div class="numbertext2">6 / 6</div>
+		    <img src="../yoga/img/stand6.png" style="width:100%">
+		 </div>
+
+  <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+  <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+	</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot2" onclick="currentSlide2(1)"></span> 
+  <span class="dot2" onclick="currentSlide2(2)"></span> 
+  <span class="dot2" onclick="currentSlide2(3)"></span> 
+  <span class="dot2" onclick="currentSlide2(4)"></span> 
+  <span class="dot2" onclick="currentSlide2(5)"></span> 
+  <span class="dot2" onclick="currentSlide2(6)"></span>  
+</div>
+</div>
+
+
+
+
+<!--  slideshow 2 script  -->
+<script type="text/javascript">
+		var slideIndex2 = 1;
+		showSlides2(slideIndex2);
+
+		function plusSlides2(n) {
+  			showSlides2(slideIndex2 += n);
+		}
+
+		function currentSlide2(n) {
+		  showSlides2(slideIndex2 = n);
+		}
+
+		function showSlides2(n) {
+		  var i;
+		  var slides2 = document.getElementsByClassName("mySlides2");
+		  var dots2 = document.getElementsByClassName("dot2");
+		  if (n > slides2.length) {slideIndex2 = 1} 
+		  if (n < 1) {slideIndex2 = slides2.length}
+		  for (i = 0; i < slides2.length; i++) {
+		      slides2[i].style.display = "none"; 
+		  }
+		  for (i = 0; i < dots2.length; i++) {
+		      dots2[i].className = dots2[i].className.replace(" active2", "");
+		  }
+		  slides2[slideIndex2-1].style.display = "block"; 
+		  dots2[slideIndex2-1].className += " active2";
+		}
+	</script>
+
+<footer></footer>	
+
+<!-- slideshow 3  -->
+<div id="third" class="sequence3">
+	<div class="slideshow-container3">
+  		<div class="mySlides3 fade3">
+    		<div class="numbertext3">1 / 5</div>
+    		<img src="../yoga/img/balance1.png" style="width:100%">
+  		</div>
+
+		 <div class="mySlides3 fade3">
+		    <div class="numbertext3">2 / 5</div>
+		    <img src="../yoga/img/balance2.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides3 fade3">
+		    <div class="numbertext3">3 / 5</div>
+		    <img src="../yoga/img/balance3.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides3 fade3">
+		    <div class="numbertext3">4 / 5</div>
+		    <img src="../yoga/img/balance4.png" style="width:100%">
+		 </div>
+
+		 <div class="mySlides3 fade3">
+		    <div class="numbertext3">5 / 5</div>
+		    <img src="../yoga/img/balance5.png" style="width:100%">
+		 </div>
+
+  <a class="prev3" onclick="plusSlides3(-1)">&#10094;</a>
+  <a class="next3" onclick="plusSlides3(1)">&#10095;</a>
+	</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot3" onclick="currentSlide2(1)"></span> 
+  <span class="dot3" onclick="currentSlide2(2)"></span> 
+  <span class="dot3" onclick="currentSlide2(3)"></span> 
+  <span class="dot3" onclick="currentSlide2(4)"></span> 
+  <span class="dot3" onclick="currentSlide2(5)"></span> 
+</div>
+</div>
+
+
+
+
+<!--  slideshow 3 script  -->
+<script type="text/javascript">
+		var slideIndex3 = 1;
+		showSlides3(slideIndex3);
+
+		function plusSlides3(n) {
+  			showSlides3(slideIndex3 += n);
+		}
+
+		function currentSlide3(n) {
+		  showSlides3(slideIndex3 = n);
+		}
+
+		function showSlides3(n) {
+		  var i;
+		  var slides3 = document.getElementsByClassName("mySlides3");
+		  var dots3 = document.getElementsByClassName("dot3");
+		  if (n > slides3.length) {slideIndex3 = 1} 
+		  if (n < 1) {slideIndex3 = slides3.length}
+		  for (i = 0; i < slides3.length; i++) {
+		      slides3[i].style.display = "none"; 
+		  }
+		  for (i = 0; i < dots3.length; i++) {
+		      dots3[i].className = dots3[i].className.replace(" active3", "");
+		  }
+		  slides3[slideIndex3-1].style.display = "block"; 
+		  dots3[slideIndex3-1].className += " active3";
+		}
+	</script>
+
+<footer>
+	<div class="top">
+			<a href="#arrowtoptop">
+				<img src="../yoga/img/whitearrow.png">
+			</a>
+	</div>
+</footer>
+
+</body>
+</html>

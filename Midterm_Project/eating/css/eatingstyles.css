@@ -1,0 +1,250 @@
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.header{
+		width: 100%;
+		position: relative;
+		margin-bottom: 10px;
+		background: rgba(96,32,32,0.5);
+		line-height: 71px;
+		text-align: center;
+	}
+	.home{
+		margin-left: 10px;
+		width:70px;
+		height:70px;
+		float: left;
+	}
+
+	nav{
+		padding-right: 100px;
+	}
+
+	nav h1{
+		max-width: 5%;
+		/*float: left;*/
+		margin: 10px;
+	}
+
+	nav ul li{
+		padding-right: 50px;
+		display: inline-block;
+		float: center;
+	}
+
+	nav a{
+		text-decoration: none; 	
+		font-family: 'Quicksand', sans-serif;	
+		color: white;
+		transition: all 0.5s;
+	}
+
+	a.link:hover{
+		color: grey;
+		transition: all 0.5s ease-in-out;
+	}
+
+	/* Content */
+
+	.main-image{
+		width: 100%;
+		height: 650px;
+		background-color: rgba(40,56,78,0.2);
+		background: url(../img/banner.png)no-repeat center fixed;
+	}
+
+	.container{
+		width: 100%;
+		height: 800px;
+		margin:0 auto;
+	    padding-top: 50px;
+	    padding-left: 250px;
+		background: url(../img/lightwood.jpg)no-repeat center center fixed;
+		background-size: cover;
+	}
+
+	.polaroid{
+		position: relative;
+	    width: 240px;
+	    display: inline-block;
+	    margin:20px;
+
+	}
+
+	.polaroid img{
+		width: 100%;
+		height: auto;
+		border: 10px solid #FEF9EF;
+		border-bottom: 45px solid #FEF9EF;
+	}
+
+	.polaroid p {
+	    position: absolute;
+	    text-align: center;
+	    width: 100%;
+	    bottom: 10px;
+	    font: 400 25px 'Sacramento', cursive;
+	    color: #888;
+	}
+
+	.polaroid p:hover{
+		text-decoration: underline;
+	}
+
+	.rotate-left{
+	    transition: all 0.5s ease;
+	}
+
+	.rotate-left:hover{
+    	transform: rotate(-10deg);
+	}
+
+	.rotate-right{
+	    transition: all 0.5s ease;
+	}
+
+	.rotate-right:hover{
+    	transform: rotate(10deg);
+	}
+
+	.recipe1{
+		width: 100%;
+		height: 800px;
+		background-color: lightblue;
+		background: url(../img/watercolor1.jpg)no-repeat center center fixed;
+		background-size: cover;
+	}
+
+	.recipe2{
+		width: 100%;
+		height: 800px;
+		background-color: lightblue;
+		background: url(../img/watercolor2.jpg)no-repeat center center fixed;
+		background-size: cover;
+	}
+
+	.recipe3{
+		width: 100%;
+		height: 800px;
+		background-color: lightblue;
+		background: url(../img/watercolor3.jpg)no-repeat center center fixed;
+		background-size: cover;
+	}
+
+	.recipe4{
+		width: 100%;
+		height: 800px;
+		background-color: lightblue;
+		background: url(../img/watercolor4.jpg)no-repeat center center fixed;
+		background-size: cover;
+	}
+
+	.recipe5{
+		width: 100%;
+		height: 800px;
+		background-color: lightblue;
+		background: url(../img/watercolor5.jpg)no-repeat center center fixed;
+		background-size: cover;
+	}
+
+	.recipe6{
+		width: 100%;
+		height: 800px;
+		background-color: pink;
+		background: url(../img/watercolor6.jpg)no-repeat center center fixed;
+		background-size: cover;
+		padding-bottom: 100px;
+	}
+
+
+	.ingredient{
+		width: 375px;
+		height: 700px;
+		background-color: rgba(254,249,239,0.6);
+		float: left;
+		margin-top: 61px;
+		margin-left: 160px;
+		display: inline-block;
+	}
+	
+	.ingredient h1{
+		font: 400 50px 'Sacramento', cursive;
+		text-align: center;
+		color: white;
+		line-height: 56px;
+	}
+
+	.ingredient ul{
+		padding-left: 50px;
+	}
+
+	.ingredient ul li{
+		font-family: 'Quicksand', sans-serif;
+		font-weight: bold;	
+		padding-top: 20px;
+		padding-bottom: 25px;
+		color: black;
+	}
+
+	.instructions{
+		width: 600px;
+		height: 700px;
+		background-color: rgba(254,249,239,0.6);
+		float: right;
+		margin-top: 61px;
+		margin-right: 240px;
+		display: inline-block;
+	}
+
+	.instructions p{
+		font-family: 'Quicksand', sans-serif;	
+		font-weight: bold;
+	}
+
+	.up{
+		width: 100%;
+		height: 50px;
+		background: rgba(96,32,32,0.5);
+		float:right;
+	}
+
+	.up img{
+		float: right;
+	}
+
+	.thumb{
+		width: 500px;
+		height: 300px;
+		background-color: white;
+		margin-top: 20px;
+		margin-left: 50px;
+		display: inline-block;
+		overflow: hidden;
+	}
+
+	.instructions p{
+		padding-top: 30px;
+		padding-left: 50px;
+		padding-right: 50px;
+		color: black;
+	}
+
+
+	footer{
+		width: 100%;
+		height: 100px;
+		background-color: grey;
+		background: url(../img/banner.png)no-repeat center fixed;
+	}
+
+	
+	.top{
+		width: 100%;
+		height: 100px;
+	}
+
+	.top img{
+		position: relative;
+		float:right;
+	}
