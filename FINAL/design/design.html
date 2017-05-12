@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>D e s i g n  S t u d i o</title>
+<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <!--Bootstrap-->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!--Latest stable release of jQuery Core Library-->
+<script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script> 
+
+<!--Bootstrap JS-->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+</script>
+
+<style type="text/css">
+
+  /* nav bar */
+    .container-fluid{
+      line-height: 47px;
+      text-align: right;
+    }
+  .nav{
+        padding-bottom: 0;
+    }
+
+        
+    .sidenav {
+        height: 100%; 
+        width: 0; 
+        position: fixed; 
+        z-index: 1; 
+        top: 0;
+        left: 0;
+        background-color: rgba(255,255,255,0.8); 
+        overflow-x: hidden; 
+        padding-top: 60px; 
+        transition: 0.5s; 
+        text-align: center;
+    }
+
+    /* The navigation menu links */
+    .sidenav a {
+        margin-top: 50px;
+        padding: 8px 8px 8px 32px;
+        font-family: 'Poiret One', cursive;
+        /*font-weight: bolder;*/
+        color: grey;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s
+    }
+
+   
+    .sidenav a:hover, .offcanvas a:focus{
+        color: #f1f1f1;
+    }
+
+  
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+   
+    #main {
+        transition: margin-left .5s;
+        padding: 20px;
+    }
+
+   
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  .box{
+    float: left;
+    width: 100px;
+    text-align: center;
+    margin: 10px;
+   }
+
+   .wrapper{
+    width: 100%;
+    height: 800px;
+   }
+
+   #wrapper{
+    width: 100%;
+    margin: 0 auto;
+    }
+
+   .spring{
+   	width: 100%;
+   	height: 80px;
+   	border: 1px solid #D4AF37;
+   	text-align: center;
+   }
+
+   h2{
+	font-family: 'Poiret One', cursive;
+   }
+
+   .rotate-left{
+    margin-top: 200px;
+    transform: rotate(-30deg);
+    }
+
+    .rotate-right1{
+        margin-top: 400px;
+        transform: rotate(100deg);
+    }
+
+    .rotate-left2{
+        margin-top: 500px;
+        margin-left: 80px;
+        transform: rotate(-50deg);
+    }
+
+    .rotate-right2{
+        transform: rotate(20deg);
+    }
+
+    .bottom{
+        margin-top: 600px;
+        transform: rotate(20deg);
+    }
+
+    .top{
+        margin-left: 100px;
+        margin-top: 40px;
+        transform: rotate(-20deg);
+    }
+
+    .right{
+        margin-right: 50px;
+    }
+
+    .purp{
+        margin-top: 70px;
+        transform: rotate(30deg);
+
+
+    }
+
+  
+</style>
+
+</head>
+
+
+
+<body>
+
+<!-- navigation bar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" type="button" class="btn btn-default" onclick="openNav()">
+        <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+        </a>
+    </div>
+  </div>
+</nav>
+<div class="spring">
+	<h2>Spring Collection Coming Soon . . . </h2>
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../index/index2.html">Home</a>
+  <a href="../shopping/shopping.html">Shop</a>
+  <a href="../magazine/magazine.html">Magazines</a>
+  <a href="../design/design.html">Design Studio</a>
+</div>
+
+
+
+
+<div class="wrapper" id="wrapper">
+        <div class="box rotate-left">
+            <img class="img" src="img/designs/assorted.jpg" />
+        </div>
+        <div class="box rotate-right1">
+            <img class="img" src="img/designs/blues.jpg" />
+        </div>
+        <div class="box">
+            <img class="img" src="img/designs/bw.jpg" />
+        </div>
+        <div class="box rotate-left2">
+            <img class="img" src="img/designs/floral-design.jpg" />
+        </div>
+         <div class="box rotate-right2">
+            <img class="img" src="img/designs/pink.JPG" />
+        </div>
+        <div class="box top">
+            <img class="img" src="img/designs/months.jpg" />
+        </div>
+        <div class="box right">
+            <img class="img" src="img/designs/floral.jpg" />
+        </div>
+        <div class="box bottom">
+            <img class="img" src="img/designs/peacock.JPG" />
+        </div>
+        <div class="box purp">
+            <img class="img" src="img/designs/purple.JPG" />
+        </div>
+    </div>
+
+<!-- SCRIPTS -->
+
+<script type="text/javascript">
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script type="text/javascript">
+    tl = new TimelineMax({
+            delay:0.5,
+            repeat: -1,
+        });
+
+    tl.add('explode', '+=15');
+
+    
+    
+    $('.img').each(function(index){
+        tl.from(this, 5, {
+            delay:0.1,
+            scale:-7,
+            x: randomNumber(-1000, 2000),
+            y: randomNumber(-500, 1000),
+            z: -1,
+            opacity: 0,
+            rotation: randomNumber(-360, 360),
+        }, Math.random()* 1.5);
+
+        tl.to(this, 5, {
+            x: randomNumber(-100, 2500),
+            y: randomNumber(-500, 1000),
+            z: randomNumber(100, 500),
+            opacity:0,
+            rotation: randomNumber(-360,240),
+            rotateX: randomNumber(-360,360),
+            rotateY: randomNumber(-200,360)
+        }, 'explode+=' + Math.random() * .5);
+    });
+    
+    function randomNumber(min, max) {
+        return Math.floor(Math.random() * (1 + max - min) + min);
+    }
+    </script>
+
+
+
+</body>
+</html>

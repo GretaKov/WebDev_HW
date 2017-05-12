@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>M a g a z i n e s</title>
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <!--Bootstrap-->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!--Latest stable release of jQuery Core Library-->
+<script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script> 
+
+<!--Bootstrap JS-->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+</script>
+
+<style type="text/css">
+  /* nav bar */
+    .container-fluid{
+      line-height: 47px;
+      text-align: right;
+    }
+  .nav{
+        padding-bottom: 0;
+    }
+
+        
+    .sidenav {
+        height: 100%; 
+        width: 0; 
+        position: fixed; 
+        z-index: 1; 
+        top: 0;
+        left: 0;
+        background-color: rgba(255,255,255,0.8); 
+        overflow-x: hidden; 
+        padding-top: 60px; 
+        transition: 0.5s; 
+        text-align: center;
+    }
+
+    /* The navigation menu links */
+    .sidenav a {
+        margin-top: 50px;
+        padding: 8px 8px 8px 32px;
+        font-family: 'Poiret One', cursive;
+]        color: grey;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s
+    }
+
+   
+    .sidenav a:hover, .offcanvas a:focus{
+        color: #f1f1f1;
+    }
+
+  
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+   
+    #main {
+        transition: margin-left .5s;
+        padding: 20px;
+    }
+
+   
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-image{
+    width: 100%;
+    height: 825px;
+    background: url(img/light.jpg)no-repeat center;
+    background-size: cover;
+  }
+
+  .container{
+    text-align: center;
+    padding-top: 60px;
+    margin-left: 300px;
+    width: 900px;
+    height: 700px;
+  }
+
+  .list-inline{
+    margin-top: 13px;
+    width: 800px;
+    height: 650px;
+  }
+
+  .bottom{
+    margin-top: 93px;
+  }
+
+  #myModal{
+    background-color: rgba(0,0,0,0.9);
+    padding-right: 297px;
+  }
+
+
+  .modal-content{
+    width: 900px;
+    height: 700px;
+  }
+
+  .modal-content > img{
+    width: 398px;
+    height: 550px;
+    position: center;
+  }
+
+
+  
+</style>
+
+</head>
+
+
+
+<body>
+
+<!-- navigation bar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" type="button" class="btn btn-default" onclick="openNav()">
+        <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+        </a>
+    </div>
+  </div>
+</nav>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../index/index2.html">Home</a>
+  <a href="../shopping/shopping.html">Shop</a>
+  <a href="../magazine/magazine.html">Magazines</a>
+  <a href="../design/design.html">Design Studio</a>
+</div>
+
+
+<div class="main-image">
+  <div class="container">
+    <ul class="list-inline">
+        <li data-toggle="modal" data-target="#myModal"><a href="#myGallery" data-slide-to="0"><img class="img-thumbnail" src="img/glamour.jpg"></a></li>
+        <li data-toggle="modal" data-target="#myModal"><a href="#myGallery2" data-slide-to="4"><img class="img-thumbnail" src="img/marieclaire.jpg"></a></li>
+        <li data-toggle="modal" data-target="#myModal"><a href="#myGallery" data-slide-to="2"><img class="img-thumbnail" src="img/vogue.jpg"></a></li>
+        <li class="bottom" data-toggle="modal" data-target="#myModal"><a href="#myGallery" data-slide-to="5"><img class="img-thumbnail" src="img/seventeen.png"></a></li>
+        <li class="bottom" data-toggle="modal" data-target="#myModal"><a href="#myGallery" data-slide-to="3"><img class="img-thumbnail" src="img/teenvogue.jpg"></a></li>
+        <li class="bottom" data-toggle="modal" data-target="#myModal"><a href="#myGallery" data-slide-to="1"><img class="img-thumbnail" src="img/vogue-ashley.jpg"></a></li>
+      <!--end of thumbnails-->
+    </ul>
+  </div>
+</div>
+
+<!-- modal window-->
+<div class="modal fade" id="myModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" title="Close"> <span class="glyphicon glyphicon-remove"></span></button>
+</div>
+<div class="modal-body">
+
+
+<!-- carousel-->
+<div id="myGallery" class="carousel slide" data-interval="false">
+  <div class="carousel-inner">
+
+    <div class="item active"> <img src="img/two.png" alt="item1"></div>
+
+    <div class="item"> <img src="img/making.jpg" alt="item2"></div>
+
+    <div class="item"> <img src="img/closet.png" alt="item3"></div>
+
+    <div class="item"> <img src="img/brush.jpg" alt="item5"></div>
+
+</div>
+<!-- buttons -->
+<a class="left carousel-control" href="#myGallery" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#myGallery" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+</div>
+<div class="modal-footer">
+<div class="pull-left">
+</div>
+</div>
+</div>
+</div>
+></div>
+
+
+
+
+
+
+
+<!-- SCRIPTS -->
+
+<script type="text/javascript">
+    
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

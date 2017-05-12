@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>S h o p</title>
+<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<style type="text/css">
+    .container-fluid{
+      line-height: 47px;
+      text-align: right;
+    }
+    .nav{
+        padding-bottom: 0;
+    }
+
+        
+    .sidenav {
+        height: 100%; 
+        width: 0; 
+        position: fixed; 
+        z-index: 1; 
+        top: 0;
+        left: 0;
+        background-color: rgba(255,255,255,0.8); 
+        overflow-x: hidden; 
+        padding-top: 60px; 
+        transition: 0.5s; 
+        text-align: center;
+    }
+
+    /* The navigation menu links */
+    .sidenav a {
+        margin-top: 50px;
+        padding: 8px 8px 8px 32px;
+        font-family: 'Poiret One', cursive;
+        color: grey;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s
+    }
+
+   
+    .sidenav a:hover, .offcanvas a:focus{
+        color: #f1f1f1;
+    }
+
+  
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+   
+    #main {
+        transition: margin-left .5s;
+        padding: 20px;
+    }
+
+   
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }
+
+    .container{
+        margin-left: 300px;
+        width: 1070px;
+        height: 2000px;
+        float: left;
+    }
+
+    .container:after {
+        content: '';
+        float:left;
+        display: inline-block;
+    }
+    
+    
+    .container .mix,
+    .container .gap {
+        float: left;
+        display: inline-block;
+        width: 200px;
+    }
+    
+    .container .mix {
+        text-align: left;
+        border-radius: 8px;
+        display: none;
+        height: 200px;
+        margin-bottom: 100px;
+
+    }
+
+    .container .mix p{
+        font-size: 16px;
+    }
+
+    .controls{
+        width: 300px;
+        height: 650px;
+        border: 0.5px solid black;
+        float: left;
+        text-align: center;
+        position: fixed;
+    }
+    .filter{
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 50px;
+    }
+    button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: white;
+            border: 1px solid #D4AF37;
+            color: grey;
+            font-size: 16px;
+            font-weight: 100;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.25s ease-in;
+        }
+
+    .foot{
+        width: 100%;
+        height: 50px;
+        margin-top: 2100px;
+        text-align: center;
+        border: 1px solid #D4AF37;
+    }
+
+    .end:hover{
+        background-color: #f7f7f7;
+    }
+
+    img{
+        width: 200px;
+        height: 300px;
+    }
+   
+    .accessories{
+        width: 200px;
+        height: 300px;
+        float: right;
+        background-color: black;
+        display: inline-block;
+        margin-top: 30px;
+        margin-right: 50px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    .shoes{
+        width: 200px;
+        height: 300px;
+        float: right;
+        background-color: black;
+        display: inline-block;
+        margin-top: 30px;
+        margin-right: 50px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+
+    }
+    .bottoms{
+        width: 200px;
+        height: 300px;
+        float: right;
+        background-color: black;
+        display: inline-block;
+        margin-top: 30px;
+        margin-right: 50px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+
+    }
+    .tops{
+        width: 200px;
+        height: 300px;
+        float: right;
+        background-color: black;
+        display: inline-block;
+        margin-top: 30px;
+        margin-right: 50px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+
+    }
+    .dresses{
+        width: 200px;
+        height: 300px;
+        float: right;
+        background-color: black;
+        display: inline-block;
+        margin-top: 30px;
+        margin-right: 50px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    footer.result{
+        margin-top: 2100px;
+        width: 100%;
+        height: 100px;
+        border: 1px solid #D4AF37;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    a{
+        text-decoration: none;
+        color: grey;
+    }
+    a:hover{
+        text-decoration: none;
+        color: grey;
+    }
+
+
+
+</style>
+    
+</head>
+<body>
+<!-- navigation bar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" type="button" class="btn btn-default" onclick="openNav()">
+        <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+        </a>
+    </div>
+  </div>
+</nav>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../index/index2.html">Home</a>
+  <a href="../shopping/shopping.html">Shop</a>
+  <a href="../magazine/magazine.html">Magazines</a>
+  <a href="../design/design.html">Design Studio</a>
+</div>
+
+
+<div class="controls">
+    <button class="filter" data-filter=".tops">Tops</button>
+    <button class="filter" data-filter=".bottoms">Bottoms</button>
+    <button class="filter" data-filter=".dresses">Dresses</button>
+    <button class="filter" data-filter=".shoes">Shoes</button>
+    <button class="filter" data-filter=".accessories">Accessories</button>
+    <button href="shopping.html" class="filter">Clear Filters</button>
+    <button class="filter end" id="calcBtn"><a href="#check">Checkout</a></button>
+</div>
+
+<div class="container" id="Container">
+<div class="mix accessories">
+    <img src="../index/img/shop/accessories/head-wrap.jpeg">
+        <label>
+            <input type="checkbox" name="option" value="8">  $ 8
+        </label>
+</div>
+<div class="mix bottoms">
+    <img src="../index/img/shop/bottoms/white-over.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="40">  $ 40
+        </label>
+</div>
+<div class="mix shoes">
+    <img src="../index/img/shop/shoes/white.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="48">  $ 48
+        </label>
+</div>
+<div class="mix tops">
+    <img src="../index/img/shop/tops/crop.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="18">  $ 18
+        </label>
+</div>
+<div class="mix accessories">
+    <img src="../index/img/shop/accessories/hoop.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="12"> $ 12
+        </label>
+</div>
+<div class="mix shoes">
+    <img src="../index/img/shop/shoes/black-high.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="102"> $ 102
+        </label>
+</div>
+<div class="mix bottoms">
+    <img src="../index/img/shop/bottoms/cor-short.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="28">  $ 28
+        </label>
+</div>
+<div class="mix dresses">
+    <img src="../index/img/shop/dresses/blue-dress.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="32">  $ 32
+        </label>
+</div>
+<div class="mix tops">
+    <img src="../index/img/shop/tops/bike.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="24">  $24
+        </label>
+</div>
+<div class="mix shoes">
+    <img src="../index/img/shop/shoes/mary.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="18">  $ 18
+        </label>
+</div>
+<div class="mix bottoms">
+    <img src="../index/img/shop/bottoms/jean1.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="32"> $ 32
+        </label>
+</div>
+<div class="mix tops">
+    <img src="../index/img/shop/tops/purple.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="28">  $ 28
+        </label>
+</div>
+<div class="mix shoes">
+    <img src="../index/img/shop/shoes/new.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="54">  $ 54
+        </label>
+</div>
+<div class="mix tops">
+    <img src="../index/img/shop/tops/tie.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="22">  $ 22
+        </label>
+</div>
+<div class="mix shoes">
+    <img src="../index/img/shop/shoes/black.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="28">  $ 28
+        </label>
+</div>
+<div class="mix accessories">
+    <img src="../index/img/shop/accessories/bucket.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="12">  $ 12
+        </label>
+</div>
+<div class="mix tops">
+    <img src="../index/img/shop/tops/white-crop.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="18">  $ 18
+        </label>
+</div>
+<div class="mix bottoms">
+    <img src="../index/img/shop/bottoms/jean2.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="32">  $ 32
+        </label>
+</div>
+<div class="mix shoes">
+    <img src="../index/img/shop/shoes/yellow.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="48">  $ 48
+        </label>
+</div>
+<div class="mix bottoms">
+    <img src="../index/img/shop/bottoms/overall.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="40">  $ 40
+        </label>
+</div>
+<div class="mix bottoms">
+    <img src="../index/img/shop/bottoms/fleece-short.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="28">  $ 28
+        </label>
+</div>
+<div class="mix bottoms">
+    <img src="../index/img/shop/bottoms/printed.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="40">  $ 40
+        </label>
+</div>
+<div class="mix tops">
+    <img src="../index/img/shop/tops/hood.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="38">  $ 38
+        </label>
+</div>
+<div class="mix shoes">
+    <img src="../index/img/shop/shoes/red.jpeg">
+    <label>
+            <input type="checkbox" name="option" value="52">  $ 52
+        </label>
+</div>
+
+</div>
+
+<div id="check">
+<footer class="result" id="totalResult"></footer>
+</div>
+
+
+<!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- smooth scroll -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+
+    <script type="text/javascript">
+
+
+    $('#reset').click(function() {
+        $('#Container').mixItUp('filter', '');
+    });
+
+    $(function() {
+
+        $('#Container').mixItUp({
+            load: {
+                filter: 'all'
+            },
+            controls: {
+                toggleFilterButtons: true, 
+                toggleLogic: 'and' 
+            },
+            animation: {
+                enable: true,
+                effects: 'fade scale rotateX stagger',
+                duration: 1000,
+                easing: 'ease',
+                perspectiveDistance: '3000',
+                perspectiveOrigin: '50% 50%',
+                queue: true,
+                queueLimit: 1,
+                animateChangeLayout: false,
+                animateResizeContainer: false,
+                animateResizeTargets: false,
+                staggerSequence: false,
+                reverseOut: false
+            }
+
+
+        });
+
+
+    });
+    </script>
+
+
+<!-- Use any element to open the sidenav -->
+<script type="text/javascript">
+    
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+<!-- Calculate Total -->
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('calcBtn').addEventListener('click', calcTotal);
+    })
+
+    function calcTotal() {
+        
+        var result = document.getElementById('totalResult');
+        
+        var num = 0;
+       
+        var sum = 0;
+        
+        var arrOp = document.getElementsByName('option');
+        console.log(arrOp);
+
+        for (var i = 0; i < arrOp.length; i++) {
+            if (arrOp[i].checked) {
+                num += 1
+                sum = sum + parseInt(arrOp[i].value); 
+                console.log(sum)
+            }
+        }
+
+        res = sum;
+        
+        var p1 = document.createElement('T');
+       
+
+       
+        var t1 = document.createTextNode('Your total is: $' + res);
+       ;
+
+        p1.appendChild(t1);
+
+ 
+        result.appendChild(p1);
+        
+
+    }
+
+
+    </script>
+
+
+<!-- smooth scroll -->
+
+<script>
+    $(document).ready(function(){
+        $('a[href^="#"]').on('click',function(e){
+            e.preventDefault();
+
+            var target = this.hash;
+            var $target = $(target);
+
+            $('html, body').animate({
+                'scrollTop': $target.offset().top
+            }, 1000, 'swing', function() {
+                window.location.hash = target;
+            });
+
+            $('html, body').animate({
+                'scrollTop': $target.offset().top
+            }, 1000, 'swing');
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

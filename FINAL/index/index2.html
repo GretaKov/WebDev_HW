@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>F  a s h i o n</title>
+<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- STYLES -->
+<style type="text/css">
+
+	/* nav bar */
+	.container-fluid{
+		line-height: 47px;
+		text-align: right;
+	}
+	/* overlay */
+	.nav {
+	    height: 0%;
+	    width: 100%;
+	    position: fixed;
+	    z-index: 1;
+	    top: 0;
+	    left: 0;
+	    background-color: rgb(0,0,0);
+	    background-color: rgba(255,255,255, 0.5);
+	    overflow-y: hidden;
+	    transition: 0.5s;
+	}
+
+	.nav-content {
+	    position: relative;
+	    top: 25%;
+	    width: 100%;
+	    text-align: center;
+	    margin-top: 30px;
+	}
+
+	.nav a {
+	    padding-bottom: 60px;
+	    text-decoration: none;
+	    font-size: 36px;
+	    color: black;
+	    display: block;
+	    transition: 0.2s;
+	    font-family: 'Poiret One', cursive;
+	}
+
+	.nav a:hover, .nav a:focus {
+	    color: #636466;
+	}
+
+	.nav .closebtn {
+	    position: absolute;
+	    top: 20px;
+	    right: 45px;
+	    font-size: 60px;
+	}
+
+	@media screen and (max-height: 450px) {
+	  .nav {overflow-y: auto;}
+	  .nav a {font-size: 20px}
+	  .nav .closebtn {
+	    font-size: 40px;
+	    top: 15px;
+	    right: 35px;
+	     }
+	}
+
+	#myNav{
+		margin-top: 70px;
+	}
+
+	/*carousel*/
+	#dataCarousel{
+		width: 1300px;
+		height: 600px;
+		margin-left: 60px;
+	}
+	.carousel-inner>.item>img{
+		height: 800px;
+	}
+
+	img{
+		width: 100%;
+	}
+
+
+	/* content */
+
+	.shop{
+		width: 100%;
+		height: 800px;
+		background-color: white;
+		margin-top: 300px;
+		background-image: url(img/background.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		}
+
+			.img1{
+				width: 210px;
+				margin-top: 20px;
+				margin-left: 300px;
+				opacity: 0;
+				transition: all 0.25s ease-in;
+			}
+
+			.js-img1-animate{
+				opacity: 1;
+			}
+
+			.img2{
+				width: 260px;
+				margin-top: 40px;
+				margin-left: 30px;
+				opacity: 0;
+				transition: all 1s ease-in-out;
+			}
+
+			.js-img2-animate{
+				opacity: 1;
+			}
+
+			.img3{
+				width: 230px;
+				margin-left: 100px;
+				margin-right: 200px;
+				opacity: 0;
+				transition: all 2s ease-in-out;
+			}
+			.js-img3-animate{
+				opacity: 1;
+			}
+
+			.img4{
+				width: 190px;
+				margin-left: 80px;
+				margin-right: 180px;
+				opacity: 0;
+				transition: all 1.5s ease-in;
+			}
+			.js-img4-animate{
+				opacity: 1;
+			}
+
+			.img5{
+				width: 200px;
+				margin-top: 10px;
+				opacity: 0;
+				transition: all 1.75s ease-in;
+				margin-right: 147px;
+			}
+			.js-img5-animate{
+				opacity: 1;
+			}
+
+			.img6{
+				width: 200px;
+				height: 300px;
+				/*margin-bottom: 300px;*/
+				opacity: 0;
+				transition: all 0.75s ease-in;
+			}
+			.js-img6-animate{
+				opacity: 1;
+			}
+
+	.button{
+		border-radius: 3px;
+		margin-left: 200px;
+	}
+	button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: white;
+            border: 1px solid #D4AF37;
+            color: grey;
+            font-size: 16px;
+            font-weight: 100;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.25s ease-in;
+        }
+
+	.button: hover{
+		text-decoration: none;
+		color: black;
+	}
+
+
+	.magazine{
+		width: 100%;
+		height: 800px;
+		background-color: white;
+		background-image: url(img/background.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-top: 50px;
+	}
+
+	.img7{
+		width: 320px;
+		margin-left: 70px;
+		margin-top: 40px;
+		opacity: 0;
+		transition: 0.75s ease-in;
+
+	}
+	.js-img7-animate{
+				opacity: 1;
+			}
+	
+	.img8{
+		width: 400px;
+		margin-left: 5px;
+		margin-top: 100px;
+		opacity: 0;
+		transition: 0.5s ease-in;
+	}
+	.js-img8-animate{
+				opacity: 1;
+			}
+	
+	.img9{
+		width: 280px;
+		margin-left: 10px;
+		margin-bottom: 60px;
+		opacity: 0;
+		transition: 2s ease-in;
+	}
+	.js-img9-animate{
+				opacity: 1;
+			}
+	
+	.img10{
+		width: 220px;
+		margin-left: 20px;
+		margin-top: 100px;
+		opacity: 0;
+		transition: 1.75s ease-in;
+	}
+	.js-img10-animate{
+				opacity: 1;
+			}
+
+	.img11{
+		width: 200px;
+		margin-left: 500px;
+		opacity: 0;
+		transition: 2s ease-in;
+	}
+	.js-img11-animate{
+				opacity: 1;
+			}
+	.img12{
+			width: 200px;
+			margin-left: 100px;
+			margin-top: 10px;
+			opacity: 0;
+			transition: 1s ease-in;
+	}
+	.js-img12-animate{
+				opacity: 1;
+			}
+
+	.design{
+		width: 100%;
+		height: 800px;
+		background-color: white;
+		background-image: url(img/background.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+
+	.img13{
+		width: 300px;
+		margin-left: 80px;
+		margin-top: 60px;
+		opacity: 0;
+		transition: all 0.25s ease-in;	}
+	.js-img13-animate{
+				opacity: 1;
+			}
+
+	.img14{
+		width: 200px;
+		opacity: 0;
+		transition: all 1s ease-in-out;
+	}
+	.js-img14-animate{
+				opacity: 1;
+			}
+	.img15{
+		width: 260px;
+		margin-left: 20px;
+		opacity: 0;
+		transition: all 2s ease-in-out;
+	}
+	.js-img15-animate{
+				opacity: 1;
+			}
+	.img16{
+		width: 340px;
+		margin-top: 40px;
+		margin-left: 50px;
+		opacity: 0;
+		transition: all 1.5s ease-in;
+	}
+	.js-img16-animate{
+				opacity: 1;
+			}
+	.img17{
+		width: 200px;
+		margin-left: 120px;
+		opacity: 0;
+		transition: 1.75s ease-in-out;
+	}
+	.js-img17-animate{
+				opacity: 1;
+			}
+	.img18{
+		width: 200px;
+		margin-top: 10px;
+		margin-left: 100px;
+		margin-right: 376px;
+		opacity: 0;
+		transition: 0.75s ease-in-out;
+	}
+	.js-img18-animate{
+				opacity: 1;
+			}
+
+
+	a{
+		color: black;
+	}
+
+	a:hover{
+		cursor: pointer;
+		text-decoration: none;
+		color: black;
+	}
+
+	
+</style>
+
+
+</head>
+<body>
+
+<!-- navigation bar -->
+<nav class="navbar navbar-default" id="panel1">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" id="flip" type="button" class="btn btn-default" aria-label="Right Align" onclick="openNav()">
+  		<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+		</a>
+    </div>
+
+</nav>
+<div id="myNav" class="nav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="nav-content">
+    <a href="#" onclick="closeNav()">Home</a>
+    <a href="#first" onclick="closeNav()">Shop</a>
+    <a href="#second" onclick="closeNav()">Magazines</a>
+    <a href="#third" onclick="closeNav()">Design</a>
+  </div>
+</div>
+  
+<!-- carousel -->
+<div id="dataCarousel" class="carousel slide" data-ride="carousel" data-pause="hover" data-interval="5000">
+
+	<!-- Indicator Buttons -->
+	<ul class="carousel-indicators">
+		<li data-target="#dataCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#dataCarousel" data-slide-to="1"></li>
+		<li data-target="#dataCarousel" data-slide-to="2"></li>
+		<li data-target="#dataCarousel" data-slide-to="3"></li>
+		<li data-target="#dataCarousel" data-slide-to="4"></li>
+	</ul>
+
+
+	<div class="carousel-inner" role="listbox">
+
+	<div class="item active">
+	<img src="img/voguerunway.jpg">
+	</div>
+	<div class="item">
+	<img src="img/free-runway.jpeg">
+	</div>
+	<div class="item">
+	<img src="img/Biyan.jpg">
+	</div>
+	<div class="item">
+	<img src="img/sheep.jpg">
+	</div>
+	<div class="item">
+	<img src="img/runway2.jpeg">
+	</div>
+	</div>
+
+</div>
+
+
+<div class="shop" id="first">
+<div class="shop-container">
+		<img class="img1" src="img/shop/tops/tie.jpeg">
+		<img class="img2" src="img/shop/bottoms/overall.jpeg">
+		<img class="img3" src="img/shop/bottoms/cor-short.jpeg">
+		<img class="img4" src="img/shop/tops/bike.jpeg">
+		<img class="img5" src="img/shop/dresses/blue-dress.jpeg">
+		<img class="img6" src="img/shop/bottoms/fleece-short.jpeg">
+	<button class="button"><a href="../shopping/shopping.html">Shop</a></button>
+</div>
+</div>
+<div class="magazine" id="second">
+		<img class="img7" src="img/magazine/fashion.jpg">
+		<img class="img8" src="img/magazine/pink.jpg">
+		<img class="img9" src="img/magazine/marie.jpg">
+		<img class="img10" src="img/magazine/elle.jpg">
+		<img class="img11" src="img/magazine/grey.jpg">
+		<img class="img12" src="img/magazine/jenn.jpg">
+		<button class="button"><a href="../magazine/magazine.html">Read</a></button>
+</div>
+<div class="design" id="third">
+		<img class="img13" src="img/designs/floral-design.jpg">
+		<img class="img14" src="img/designs/bw.jpg">
+		<img class="img15" src="img/designs/blues.jpg">
+		<img class="img16" src="img/designs/floral.jpg">
+		<img class="img17" src="img/designs/pinks.jpg">
+		<img class="img18" src="img/designs/months.jpg">
+		<button class="button"><a href="../design/design.html">Explore</a></button>
+</div>
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
+
+ 
+
+<!-- SCRIPTS -->
+
+<!-- carousel -->
+<script 
+  src="http://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<!-- smooth scroll -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<!-- when you get to specific div -->
+<script src="js/jquery.waypoints.min.js"></script>
+
+
+
+<!-- slide nav -->
+<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "800px";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+</script>
+
+
+
+<script>
+	$(document).ready(function(){
+		$('a[href^="#"]').on('click',function(e){
+			e.preventDefault();
+
+			var target = this.hash;
+			var $target = $(target);
+
+			$('html, body').animate({
+				'scrollTop': $target.offset().top
+			}, 1000, 'swing', function() {
+				window.location.hash = target;
+			});
+
+			$('html, body').animate({
+				'scrollTop': $target.offset().top
+			}, 1000, 'swing');
+		});
+	});
+</script>
+
+<!-- smooth scroll -->
+
+<script type="text/javascript">
+	var $shop = $('.shop');
+	var $img1 = $('.img1');
+	var $img2 = $('.img2');
+	var $img3 = $('.img3');
+	var $img4 = $('.img4');
+	var $img5 = $('.img5');
+	var $img6 = $('.img6');
+	$shop.waypoint(function(){
+		$img1.addClass('js-img1-animate');
+		$img2.addClass('js-img2-animate');
+		$img3.addClass('js-img3-animate');
+		$img4.addClass('js-img4-animate');
+		$img5.addClass('js-img5-animate');
+		$img6.addClass('js-img6-animate');
+	}, {offset: '50%'});
+
+</script>
+
+
+<script type="text/javascript">
+	var $magazine = $('.magazine');
+	var $img7 = $('.img7');
+	var $img8 = $('.img8');
+	var $img9 = $('.img9');
+	var $img10 = $('.img10');
+	var $img11 = $('.img11');
+	var $img12 = $('.img12');
+	$magazine.waypoint(function(){
+		$img7.addClass('js-img7-animate');
+		$img8.addClass('js-img8-animate');
+		$img9.addClass('js-img9-animate');
+		$img10.addClass('js-img10-animate');
+		$img11.addClass('js-img11-animate');
+		$img12.addClass('js-img12-animate');
+	}, {offset: '50%'});
+</script>
+
+<script type="text/javascript">
+	var $design = $('.design');
+	var $img13 = $('.img13');
+	var $img14 = $('.img14');
+	var $img15 = $('.img15');
+	var $img16 = $('.img16');
+	var $img17 = $('.img17');
+	var $img18 = $('.img18');
+	$design.waypoint(function(){
+		$img13.addClass('js-img13-animate');
+		$img14.addClass('js-img14-animate');
+		$img15.addClass('js-img15-animate');
+		$img16.addClass('js-img16-animate');
+		$img17.addClass('js-img17-animate');
+		$img18.addClass('js-img18-animate');
+	}, {offset: '50%'});
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
